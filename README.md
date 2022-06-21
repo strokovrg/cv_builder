@@ -1,32 +1,19 @@
-Работу выполнили студенты группы ИКМО-03-21 Строков Р.Г. и Самыгин В.Д.
+<h1 align="center">Работу выполнили студенты группы ИКМО-03-21 <br> Строков Р.Г. и Самыгин В.Д.<h1>
+<h3>Используемые библиотеки:<br><br>
+    "bootstrap": "^5.2.0-beta1",<br>
+    "classnames": "^2.3.1",<br>
+    "materialize-css": "^1.0.0-rc.2",<br>
+    "react": "^18.1.0",<br>
+    "react-bootstrap": "^2.4.0",<br>
+    "react-dom": "^18.1.0",<br>
+    "react-router-dom": "^6.3.0",<br>
+    "react-scripts": "5.0.1",<br>
+    "react-to-print": "^2.14.7",<br>
+    "uimini": "^2.0.7",<br>
+    "web-vitals": "^2.1.4"🇺<br>
+    </h3>
 
-Используемые библиотеки:
-    "bootstrap": "^5.2.0-beta1",
-    "classnames": "^2.3.1",
-    "materialize-css": "^1.0.0-rc.2",
-    "react": "^18.1.0",
-    "react-bootstrap": "^2.4.0",
-    "react-dom": "^18.1.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "react-to-print": "^2.14.7",
-    "uimini": "^2.0.7",
-    "web-vitals": "^2.1.4"
     
-<h1 align="center">Работу выполнили студенты группы ИКМО-03-21 Строков Р.Г. и Самыгин В.Д.<h1>
-<h3 align="center">Используемые библиотеки:
-    "bootstrap": "^5.2.0-beta1",
-    "classnames": "^2.3.1",
-    "materialize-css": "^1.0.0-rc.2",
-    "react": "^18.1.0",
-    "react-bootstrap": "^2.4.0",
-    "react-dom": "^18.1.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "react-to-print": "^2.14.7",
-    "uimini": "^2.0.7",
-    "web-vitals": "^2.1.4"🇺</h3>
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
