@@ -1,5 +1,20 @@
 Работу выполнили студенты группы ИКМО-03-21 Строков Р.Г. и Самыгин В.Д.
 
+Используемые библиотеки:
+    "bootstrap": "^5.2.0-beta1",
+    "classnames": "^2.3.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "react": "^18.1.0",
+    "react-bootstrap": "^2.4.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-to-print": "^2.14.7",
+    "uimini": "^2.0.7",
+    "web-vitals": "^2.1.4"
+    
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
