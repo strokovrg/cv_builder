@@ -12,6 +12,13 @@ import { ReactComponent as MailIcon } from '../assets/icons/mail.svg'
 import { ReactComponent as PhoneIcon } from '../assets/icons/phone.svg'
 import { ReactComponent as PrintIcon } from '../assets/icons/print.svg'
 
+// ToDo app:
+import { useState } from 'react'
+import ToDo from './ToDo'
+import ToDoForm from './ToDoForm'
+
+import './main.scss';
+
 const Wrapper = styled.div`
   max-width: 1200px;
   margin: 2rem auto;
@@ -57,6 +64,32 @@ const CV = () => {
     const handlePrintClick = useReactToPrint({
         content: () => componentRef.current,
     })
+
+    const [todos, setTodos] = useState([])
+
+    const addTask = (userInput) => {
+        if (userInput) {
+            const newItem = {
+                id: Math.random().toString(36).substr(2, 9),
+                task: userInput,
+                complete: false
+            }
+            setTodos([...todos, newItem])
+        }
+    }
+
+    const removeTask = (id) => {
+        setTodos([...todos.filter((todo) => todo.id !== id)])
+    }
+
+    const handleToggle = (id) => {
+        setTodos([
+            ...todos.map((todo) =>
+                todo.id === id ? { ...todo, complete: !todo.complete } : { ...todo }
+            )
+        ])
+    }
+
     return (
         <>
             <div className='PrintButton, center-align'>
@@ -113,11 +146,23 @@ const CV = () => {
                                     onClick={() => setWorksCounter(worksCounter + 1)}
                                     style={{ marginTop: '3.6rem' }}
                                 >
-                                    Work experience:
+                                    <div className="App">
+                                        <header>
+                                            <h1>Work experience: {todos.length}</h1>
+                                        </header>
+                                        <ToDoForm addTask={addTask} />
+                                        {todos.map((todo) => {
+                                            return (
+                                                <ToDo
+                                                    todo={todo}
+                                                    key={todo.id}
+                                                    toggleTask={handleToggle}
+                                                    removeTask={removeTask}
+                                                />
+                                            )
+                                        })}
+                                    </div>
                                 </Title>
-                                {new Array(worksCounter).fill(1).map((_, i) => (
-                                    <Descr key={i}>{i + 1}. Solutions Architect, Stripe.</Descr>
-                                ))}
 
                                 <Title
                                     size='3'
@@ -126,12 +171,24 @@ const CV = () => {
                                     onClick={() => setSkillsCounter(skillsCounter + 1)}
                                     style={{ marginTop: '3rem' }}
                                 >
-                                    Skills:
-                                </Title>
 
-                                {new Array(skillsCounter).fill(1).map((_, i) => (
-                                    <Range key={i} />
-                                ))}
+                                    <div className="App">
+                                        <header>
+                                            <h1>Skills: {todos.length}</h1>
+                                        </header>
+                                        <ToDoForm addTask={addTask} />
+                                        {todos.map((todo) => {
+                                            return (
+                                                <ToDo
+                                                    todo={todo}
+                                                    key={todo.id}
+                                                    toggleTask={handleToggle}
+                                                    removeTask={removeTask}
+                                                />
+                                            )
+                                        })}
+                                    </div>
+                                </Title>
                             </Content>
                         </Row>
                     </div>

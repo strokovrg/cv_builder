@@ -44,7 +44,7 @@ const Title = ({
       </p>
       {isShowButton && (
         <button className='ui-button isLink' onClick={onClick}>
-          add
+
         </button>
       )}
     </Wrapper>
