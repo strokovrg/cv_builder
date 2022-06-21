@@ -66,6 +66,7 @@ const CV = () => {
     })
 
     const [todos, setTodos] = useState([])
+    const [works, setWorks] = useState([])
 
     const addTask = (userInput) => {
         if (userInput) {
@@ -139,30 +140,13 @@ const CV = () => {
                                 </Title>
                                 <Descr>RTU MIREA - Software Engineering</Descr>
 
-                                <Title
-                                    size='3'
-                                    isUppercase
-                                    isShowButton
-                                    onClick={() => setWorksCounter(worksCounter + 1)}
-                                    style={{ marginTop: '3.6rem' }}
-                                >
-                                    <div className="App">
-                                        <header>
-                                            <h1>Work experience: {todos.length}</h1>
-                                        </header>
-                                        <ToDoForm addTask={addTask} />
-                                        {todos.map((todo) => {
-                                            return (
-                                                <ToDo
-                                                    todo={todo}
-                                                    key={todo.id}
-                                                    toggleTask={handleToggle}
-                                                    removeTask={removeTask}
-                                                />
-                                            )
-                                        })}
-                                    </div>
+                                <br />
+                                <br />
+
+                                <Title size='3' isUppercase>
+                                    Work experience:
                                 </Title>
+                                <Descr>Google: software engineer</Descr>
 
                                 <Title
                                     size='3'
